@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="workers">
+        <h3> Работники предприятия </h3>
+
+        <table class="table table-striped">
+            <tr>
+                <th><p>Имя </p></th>
+                <th><p>Фамилия </p></th>
+                <th><p>Место работы</p></th>
+            </tr>
+            @foreach (var b in ViewBag.Workers)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Last</p></td>
+                    <td><p>@b.Place</p></td>
+                </tr>
+            }
+        </table>
+    </div>
+ 
